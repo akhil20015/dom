@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" > 
+  <title>Survery Form</title>
+  <script src="https://kit.fontawesome.com/4730190c6a.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="scripts/survey.js" async></script>
+  <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+ 
+  <h1 id="title">Survey Form</h1>
+  <p id="description">We would love to hear from you Folks!</p>
+  <form id="survey-form" action="#">
+    <fieldset class="entry">
+      <label for="name" id="name-label">Enter your name</label>
+      <div id="name">
+        <input class="border" name="name" id="fullname" type="text" placeholder="Name" onclick="validation(id)" >
+        <i id="nameIcon_right" class="fa-solid fa-circle-check fa-xl right"></i>
+        <i id="nameIcon_wrong" class="fa-solid fa-circle-xmark fa-xl wrong"></i>
+      </div>
+      <label for="email" id="email-label">Enter your email</label>
+      <div>
+        <input class="border" name="email" id="email" type="email" placeholder="Email" onclick="validation(id)">
+        <i id="emailIcon_right" class="fa-solid fa-circle-check fa-xl right"></i>
+        <i id="emailIcon_wrong" class="fa-solid fa-circle-xmark fa-xl wrong"></i>
+      </div>
+      <label for="number" id="number_label">Enter your number </label>
+      <div>
+        <input class="border" name="number" id="age" type="number" placeholder="Number" onclick="validation(id)">
+        <i id="ageIcon_right" class="fa-solid fa-circle-check fa-xl right"></i>
+        <i id="ageIcon_wrong" class="fa-solid fa-circle-xmark fa-xl wrong"></i>
+      </div>
+      <label for="password" id="password-label">Enter your Password</label>
+      <div>
+        <input id="password" class="border" type="password" placeholder="Password" onclick="validation(id)">
+        <i id="passIcon_right" class="fa-solid fa-circle-check fa-xl right"></i>
+        <i id="passIcon_wrong" class="fa-solid fa-circle-xmark fa-xl wrong"></i>
+      </div>
+    </fieldset>
+  
+    <fieldset> 
+      <div class="selection"> 
+      <select class="border " id="dropdown">
+        <option >Select</option>
+        <option selected>On-site</option>
+        <option>Remote</option>
+      </select>
+      </div>
+      <div class="radio">
+        <label><input name="gender" value="male" type="radio" >Male</label>
+        <label><input name="gender" value="female" type="radio">Female</label>
+        <label><input name="gender" value="others" type="radio">Others</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="checkbox">
+        <label><input value="1" type="checkbox">One </label>
+        <label><input value="2" type="checkbox">Two </label>
+        <label><input value="3" type="checkbox">Three </label>
+      </div>
+      <div class="comment">
+      <label>Additional comments
+        <textarea rows="4"></textarea>
+      </label>
+      </div>
+    </fieldset>
+    <div class="sub-btn"><input id="submit" type="submit"></div>
+  </form>
+  
+</body>
+</html>
